@@ -111,7 +111,7 @@ class JsonFormat extends FormatAbstract {
 		}
 		$data['items'] = $items;
 
-		$toReturn = json_encode($data, JSON_PRETTY_PRINT);
+		$toReturn = json_encode($data, JSON_FORCE_OBJECT);
 
 		// Remove invalid non-UTF8 characters
 		ini_set('mbstring.substitute_character', 'none');
